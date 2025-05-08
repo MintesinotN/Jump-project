@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: your-phoenix-app
+    env: elixir
+    region: oregon # or your preferred region
+    buildCommand: "./build.sh"
+    startCommand: "bash ./start.sh"
+    envVars:
+      - key: SECRET_KEY_BASE
+        generateValue: true
+      - key: MIX_ENV
+        value: prod
